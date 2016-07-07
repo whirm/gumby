@@ -43,6 +43,8 @@ def runOnFreeCluster(experimentConf){
 
   stage 'Find a free cluster'
 
+  sh "ls -l"
+
   def experimentName
   def clusterName
   node('master') {  def confFile = readFile(experimentConf).replaceAll(/#.*/,"")
